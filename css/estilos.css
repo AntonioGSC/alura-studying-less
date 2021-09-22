@@ -1,3 +1,11 @@
+.sombra-padrao {
+  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+}
+.image-replacement {
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
 /** Geral **/
 body {
   font-family: "Roboto Slab", serif;
@@ -46,7 +54,7 @@ header .container {
   width: 5em;
 }
 .menu-opcoes a {
-  color: white;
+  color: #FFF;
   text-decoration: none;
 }
 .menu-opcoes a:hover {
@@ -57,7 +65,7 @@ header .container {
   background: url(../imagens/destaque.jpg) center bottom repeat-x;
   -webkit-background-size: cover;
   background-size: cover;
-  color: white;
+  color: #FFF;
   height: 330px;
   padding-top: 10em;
 }
@@ -77,12 +85,19 @@ header .container {
   margin-top: 1em;
   background: #c24e4b;
   border: 0;
-  padding: 0.6em;
+  padding: .6em;
   font-size: 1.2em;
-  -webkit-border-radius: 0.3em;
-  border-radius: 0.3em;
+  -webkit-border-radius: 2em;
+  -o-border-radius: 2em;
+  border-radius: 2em;
   box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
   font-weight: bold;
+}
+.destaque button:hover {
+  background: #c8615e;
+}
+.destaque button:active {
+  background: #b6413e;
 }
 /** Sobre **/
 .sobre {
@@ -130,13 +145,13 @@ header .container {
 }
 /** Planos **/
 .planos {
-  background: #1e2c35;
+  background: cor-auxiliar;
 }
 .planos h2 {
-  color: #fff;
+  color: #FFF;
 }
 .plano {
-  background: white;
+  background: #FFF;
   width: 18em;
   display: inline-block;
   margin: 1em 0 0 1.4em;
@@ -146,12 +161,12 @@ header .container {
   background: #dedede;
 }
 .plano h3 {
-  color: #fff;
+  color: #FFF;
   font-size: 1.8em;
   background: #c24e4b;
   text-align: center;
   height: 2em;
-  padding-top: 0.6em;
+  padding-top: .6em;
   margin-top: 0;
 }
 .plano div {
@@ -166,7 +181,7 @@ header .container {
   font-size: 1em;
   list-style: none;
   border-bottom: 1px solid #acacac;
-  padding: 0.5em;
+  padding: .5em;
   width: 14.8em;
 }
 .itens-plano li:last-child {
@@ -178,11 +193,12 @@ header .container {
 .plano button {
   background: #c24e4b;
   border: 0;
-  color: #fff;
+  color: #FFF;
   width: 210px;
   height: 38px;
   font-size: 1.2em;
   -webkit-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
   border-radius: 0.3em;
   box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
   margin-left: 2em;
@@ -208,7 +224,7 @@ header .container {
   content: "";
   background: url(../imagens/fundo.png);
   background-size: 25px 25px;
-  opacity: 0.15;
+  opacity: .15;
   top: 0;
   left: 0;
   bottom: 0;
@@ -251,9 +267,10 @@ form {
 .contato input,
 textarea {
   width: 100%;
-  margin-bottom: 0.8em;
+  margin-bottom: .8em;
   padding: 4px 8px;
   -webkit-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
   border-radius: 0.3em;
   border: 2px solid #ccc;
 }
@@ -261,11 +278,12 @@ textarea {
   margin: 0 auto;
   background: #c24e4b;
   border: 0;
-  color: #fff;
+  color: #FFF;
   width: 210px;
   height: 38px;
   font-size: 1.2em;
   -webkit-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
   border-radius: 0.3em;
   box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
 }
@@ -277,7 +295,7 @@ footer {
 footer::after {
   content: "";
   background: url(../imagens/fundo-rodape.png);
-  opacity: 0.02;
+  opacity: .02;
   top: 0;
   left: 0;
   bottom: 0;
@@ -324,7 +342,7 @@ footer .container img {
   display: inline;
 }
 footer a {
-  color: #fff;
+  color: #FFF;
   text-decoration: none;
 }
 .social li {

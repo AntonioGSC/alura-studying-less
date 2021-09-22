@@ -1,4 +1,24 @@
+// Variáveis
 @cor-padrao: #c24e4b;
+@cor-branca: #FFF;
+@cor-auxiliar: #1e2c35;
+
+// Mixins
+.borda-arredondada(@raio-da-borda: 0.3em){
+  -webkit-border-radius: @raio-da-borda;
+  -o-border-radius: @raio-da-borda;
+  border-radius: @raio-da-borda;
+}
+
+.sombra-padrao{
+  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+}
+
+.image-replacement{
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
 
 /** Geral **/
 body {
@@ -30,7 +50,7 @@ h2 {
 /** Header **/
 header {
   border-top: 5px solid @cor-padrao;
-  background: rgba(30, 44, 53, 0.8);
+  background: fade(@cor-auxiliar, 80);
   height: 90px;
   width: 100%;
   position: absolute;
@@ -58,7 +78,7 @@ header .container {
 }
 
 .menu-opcoes a {
-  color: white;
+  color: @cor-branca;
   text-decoration: none;
 }
 
@@ -71,7 +91,7 @@ header .container {
   background: url(../imagens/destaque.jpg) center bottom repeat-x;
   -webkit-background-size: cover;
   background-size: cover;
-  color: white;
+  color: @cor-branca;
   height: 330px;
   padding-top: 10em;
 }
@@ -97,12 +117,18 @@ header .container {
   border: 0;
   padding: .6em;
   font-size: 1.2em;
-  -webkit-border-radius: 0.3em;
-  border-radius: 0.3em;
-  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  .borda-arredondada(2em);
+  .sombra-padrao;
   font-weight: bold;
 }
 
+.destaque button:hover{
+  background: lighten(@cor-padrao, 5);
+}
+
+.destaque button:active{
+  background: darken(@cor-padrao, 5);
+}
 
 /** Sobre **/
 .sobre {
@@ -136,9 +162,7 @@ header .container {
   display: inline-block;
   width: 50px;
   height: 60px;
-  text-indent: -9999px;
-  overflow: hidden;
-  background-repeat: no-repeat;
+  .image-replacement;
   background-position: center;
   margin: 1em 1.5em 0 0;
 }
@@ -161,15 +185,15 @@ header .container {
 
 /** Planos **/
 .planos {
-  background: #1e2c35;
+  background: cor-auxiliar;
 }
 
 .planos h2 {
-  color: #fff;
+  color: @cor-branca;
 }
 
 .plano {
-  background: white;
+  background: @cor-branca;
   width: 18em;
   display: inline-block;
   margin: 1em 0 0 1.4em;
@@ -181,7 +205,7 @@ header .container {
 }
 
 .plano h3 {
-  color: #fff;
+  color: @cor-branca;
   font-size: 1.8em;
   background: @cor-padrao;
   text-align: center;
@@ -219,13 +243,12 @@ header .container {
 .plano button {
   background: @cor-padrao;
   border: 0;
-  color: #fff;
+  color: @cor-branca;
   width: 210px;
   height: 38px;
   font-size: 1.2em;
-  -webkit-border-radius: 0.3em;
-  border-radius: 0.3em;
-  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  .borda-arredondada;
+  .sombra-padrao;
   margin-left: 2em;
 }
 
@@ -308,8 +331,7 @@ textarea {
   width: 100%;
   margin-bottom: .8em;
   padding: 4px 8px;
-  -webkit-border-radius: 0.3em;
-  border-radius: 0.3em;
+  .borda-arredondada;
   border: 2px solid #ccc;
 }
 
@@ -317,13 +339,12 @@ textarea {
   margin: 0 auto;
   background: @cor-padrao;
   border: 0;
-  color: #fff;
+  color: @cor-branca;
   width: 210px;
   height: 38px;
   font-size: 1.2em;
-  -webkit-border-radius: 0.3em;
-  border-radius: 0.3em;
-  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  .borda-arredondada;
+  .sombra-padrao;
 }
 
 /** Footer **/
@@ -346,7 +367,7 @@ footer::after {
 
 footer::before {
   content: "";
-  background: #1e2c35;
+  background: @cor-auxiliar;
   top: 0;
   left: 0;
   bottom: 0;
@@ -391,7 +412,7 @@ footer .container img {
 }
 
 footer a {
-  color: #fff;
+  color: @cor-branca;
   text-decoration: none;
 }
 
@@ -403,9 +424,7 @@ footer a {
   display: block;
   width: 55px;
   height: 55px;
-  text-indent: -9999px;
-  overflow: hidden;
-  background-repeat: no-repeat;
+  .image-replacement;
   margin-left: 1em;
 }
 
