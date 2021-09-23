@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          "css/layout/media-queries.css": "css/layout/media-queries.less",
+          // "css/layout/media-queries.css": "css/layout/media-queries.less",
           "css/estilos.css": "css/estilos.less" // Caminho dos arquivos
         }
       }

@@ -375,6 +375,11 @@ body {
   width: 940px;
   margin: 0 auto;
 }
+@media (max-width: 980px) {
+  .container {
+    width: 90%;
+  }
+}
 .titulo-secao {
   text-decoration: underline;
   font-size: 2em;
@@ -397,8 +402,18 @@ header {
   width: 100%;
   position: absolute;
 }
+@media (max-width: 980px) {
+  header {
+    height: auto;
+  }
+}
 header .container {
   position: relative;
+}
+@media (max-width: 980px) {
+  header .container {
+    position: static;
+  }
 }
 .menu-principal {
   position: absolute;
@@ -407,12 +422,24 @@ header .container {
   font-size: 1.2em;
   font-weight: lighter;
 }
+@media (max-width: 980px) {
+  .menu-principal {
+    position: static;
+    display: block;
+    text-align: center;
+  }
+}
 .menu-principal ul {
   padding-left: 0;
 }
 .menu-principal li {
   display: inline-block;
   width: 5em;
+}
+@media (max-width: 980px) {
+  .menu-principal li {
+    margin: .4em;
+  }
 }
 .menu-principal a {
   color: #FFF;
@@ -429,6 +456,12 @@ header .container {
   color: #FFF;
   height: 330px;
   padding-top: 10em;
+}
+@media (max-width: 980px) {
+  .destaque {
+    font-size: 14px;
+    height: 250px;
+  }
 }
 .destaque p {
   width: 30em;
@@ -729,15 +762,6 @@ footer a {
   background-image: url(../imagens/instagram.png);
 }
 @media (max-width: 980px) {
-  .container {
-    width: 90%;
-  }
-  header {
-    height: auto;
-  }
-  header .container {
-    position: static;
-  }
   header h1 {
     max-width: 50%;
     margin: 0 auto;
@@ -746,18 +770,6 @@ footer a {
     max-width: 100%;
     margin: .5em auto;
     display: block;
-  }
-  .menu-principal {
-    position: static;
-    display: block;
-    text-align: center;
-  }
-  .menu-principal li {
-    margin: .4em;
-  }
-  .destaque {
-    font-size: 14px;
-    height: 250px;
   }
   .menu-principal,
   .menu-principal li,
